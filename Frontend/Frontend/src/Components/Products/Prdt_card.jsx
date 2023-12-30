@@ -11,7 +11,7 @@ const Prdt_main = () => {
   const [lowPrice, setLowPrice] = useState();
 
   const fetchProducts = async () => {
-    const allPrdts = await axios.get("http://localhost:5000/products");
+    const allPrdts = await axios.get("https://rablo-backend-64pz.onrender.com/products");
     let getProducts = allPrdts.data;
     setItems(getProducts.products);
     console.log(items);
@@ -20,7 +20,7 @@ const Prdt_main = () => {
   const deletePdt = async (id) => {
     try {
       let deletedPrdt = await axios.delete(
-        `http://localhost:5000/products/${id}`
+        `https://rablo-backend-64pz.onrender.com/products/${id}`
       );
       fetchProducts();
       console.log("deleted successfully");
@@ -31,7 +31,7 @@ const Prdt_main = () => {
 
   const ftProduct = async () => {
     try {
-      let fp = await axios.get("http://localhost:5000/products/ft");
+      let fp = await axios.get("https://rablo-backend-64pz.onrender.com/products/ft");
       setItems(fp.data.ftPrdt);
     } catch (err) {
       console.log(err);
@@ -41,7 +41,7 @@ const Prdt_main = () => {
   const fetchHigh = async (e) => {
     e.preventDefault()
     try {
-      let pHigh = await axios.post("http://localhost:5000/products/above", {"highPrice" : highPrice});
+      let pHigh = await axios.post("https://rablo-backend-64pz.onrender.com/products/above", {"highPrice" : highPrice});
       setItems(pHigh.data)
     } catch (err) {
       console.log(err);
@@ -51,7 +51,7 @@ const Prdt_main = () => {
   const fetchLow = async (e) => {
     e.preventDefault()
     try {
-      let pLow = await axios.post("http://localhost:5000/products/below", {"lowPrice" :lowPrice});
+      let pLow = await axios.post("https://rablo-backend-64pz.onrender.com/products/below", {"lowPrice" :lowPrice});
       setItems(pLow.data)
     } catch (err) {
       console.log(err);
