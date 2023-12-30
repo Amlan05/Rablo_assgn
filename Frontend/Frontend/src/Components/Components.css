@@ -1,0 +1,39 @@
+
+.auth{
+    margin-top: 4%;
+    cursor: pointer;
+}
+
+.choose{
+    cursor: pointer;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-around;
+}
+
+.addForm{
+    border: 2px solid black;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.all{
+    margin-left: 20px;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.low{
+    width: 45%;
+}
+
+.high{
+    width: 45%
+}
+
