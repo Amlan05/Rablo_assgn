@@ -13,7 +13,7 @@ const Add_Product = () => {
 
 const addNewProduct = async(data) => {
     try{
-        let sentData = await axios.post('https://rablo-backend-64pz.onrender.com/products/add', data)
+        let sentData = await axios.post('http://localhost:5000/products/add', data)
         setStatus("Product Added Successfully🥳")
         setTimeout( () => {
             navigate('/')

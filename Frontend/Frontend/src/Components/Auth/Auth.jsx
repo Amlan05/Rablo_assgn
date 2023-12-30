@@ -14,7 +14,7 @@ const Auth = () => {
 
     const registration = async(data) => {
     try{
-      let regData = await axios.post('https://rablo-backend-64pz.onrender.com/user/signup', data)
+      let regData = await axios.post('http://localhost:5000/user/signup', data)
       const setId = regData.data.newUser
       localStorage.setItem('userId', setId._id)
       setStatus(regData.data.message)
@@ -31,7 +31,7 @@ const Auth = () => {
     
     const loggingIn = async(data) => {
       try{
-        let logData = await axios.post('https://rablo-backend-64pz.onrender.com/user/login', data)
+        let logData = await axios.post('http://localhost:5000/user/login', data)
         const setId = logData.data.existingUser
         localStorage.setItem('userId', setId._id)
         setStatus(logData.data.message)

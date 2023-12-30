@@ -16,7 +16,7 @@ const Update_Product = () => {
     const updateProduct = async(data) => {
         const id = params.id
         try{
-            let updatedData = await axios.patch(`https://rablo-backend-64pz.onrender.com/products/${id}`, data)
+            let updatedData = await axios.patch(`http://localhost:5000/products/${id}`, data)
             setStatus("Product Updated Successfully🥳")
             setTimeout( () => {
                 navigate('/')
